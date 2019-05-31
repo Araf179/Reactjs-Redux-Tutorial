@@ -6,6 +6,8 @@ import CardList from '../components/CardList';
 import SearchBox from '../components/SearchBox';
 import Scroll from '../components/Scroll';
 import ErrorBoundry from '../components/ErrorBoundry';
+import Header from '../components/header';
+
 
 import './App.css';
 
@@ -43,6 +45,7 @@ class App extends Component {
       <div className='tc'>
         <h1 className='f1'>RoboFriends</h1>
         <SearchBox searchChange={onSearchChange}/>
+        <Header />
         <Scroll>
           { isPending ? <h1>Loading</h1> :
             <ErrorBoundry>
